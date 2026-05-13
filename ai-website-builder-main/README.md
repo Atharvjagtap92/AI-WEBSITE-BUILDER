@@ -1,60 +1,57 @@
-AI SiteForge — Intelligent Website Generator
+AI Website Builder using Reflex + FastAPI + Gemini AI
 Overview
+AI Website Builder is a full-stack AI-powered platform that dynamically generates professional business websites using Google Gemini AI.
 
-AI SiteForge is a full-stack AI-powered platform that automatically generates modern business websites using Google Gemini AI.
+Users can enter a business name and the system automatically:
 
-Users simply enter a business name, and the system intelligently:
+Detects business context
+Generates website content
+Creates hero/about/services/CTA sections
+Renders modern UI dynamically
+Generates different layouts for different business types
+The platform is built using:
 
-Detects the business category
-Generates website content dynamically
-Creates Hero, About, Services, and CTA sections
-Builds responsive UI layouts
-Adapts designs for different industries
-
-The platform is developed using:
-
-Reflex (Frontend Framework)
-FastAPI
-Google Gemini AI
-MySQL
+Reflex (Python Frontend Framework)
+FastAPI Backend
+Google Gemini AI API
+MySQL Database
 SQLAlchemy ORM
 JWT Authentication
 Features
 AI Website Generation
+Generate websites dynamically using Gemini AI.
 
-Generate complete business websites dynamically using Gemini AI.
-
-Dynamic Website Sections
+Generated Sections
 Hero Section
 About Section
 Services Section
-Call-To-Action Section
-Smart Business Detection
+CTA Section
+Dynamic Business Content
+Dynamic Business Detection
+Different business names generate different website structures.
 
-Different business names automatically generate different website styles and content.
-
-Examples
-Business Name	Generated Website Type
-Bright Future Academy	Education Website
-Spice Garden	Restaurant Website
-IronCore Fitness	Gym/Fitness Website
-NovaTech Solutions	SaaS/Technology Website
-Modern UI Features
-Fully responsive layout
-Modern gradients and cards
+Example
+Business Name	Generated Website
+AIMS College	Education Website
+Pizza Palace	Restaurant Website
+Titan Gym	Fitness Website
+TechNova AI	SaaS/Technology Website
+Modern SaaS UI
+Responsive design
+Gradient hero sections
+Modern cards
 Dynamic rendering
-Professional typography
-Dashboard-style interface
-Smooth spacing and alignment
+Business dashboard UI
+Professional spacing and typography
 Authentication System
-User Signup
-User Login
+Login
+Signup
 JWT Authentication
-Password Hashing & Security
-Project Management
+Password Hashing
+Project Saving
 Save generated projects
 Continue editing later
-JSON-based dynamic storage
+Dynamic JSON structure
 Tech Stack
 Frontend
 Reflex
@@ -64,17 +61,17 @@ Backend
 FastAPI
 SQLAlchemy
 Alembic
-JWT Authentication
+JWT
 Database
 MySQL
-AI Integration
+AI
 Google Gemini API
-Export Features
-Markdown Export
+Export
+ReportLab
+Markdown
 ZIP Export
-ReportLab PDF Export
 Project Structure
-ai-siteforge/
+ai-website-builder/
 │
 ├── backend/
 │   ├── app/
@@ -101,58 +98,60 @@ ai-siteforge/
 ├── .env
 └── README.md
 Installation Guide
-1. Clone Repository
+1. Clone Project
 git clone <repository-url>
 Backend Setup
-2. Navigate to Backend
-cd backend
+2. Navigate Backend
+cd Backend
 3. Create Virtual Environment
+Windows
 python -m venv venv
 4. Activate Virtual Environment
 PowerShell
 .\venv\Scripts\Activate.ps1
 CMD
 venv\Scripts\activate
-5. Install Dependencies
+5. Install Backend Dependencies
 pip install -r requirements.txt
 6. Install Additional Packages
 pip install google-generativeai
 pip install pydantic-settings
 pip install python-dotenv
-MySQL Configuration
+MySQL Setup
 7. Install MySQL
-
-Required:
+Download:
 
 MySQL Community Server
 MySQL Workbench
 8. Create Database
-CREATE DATABASE siteforge_db;
+CREATE DATABASE ai_builder;
 Environment Variables
-9. Create .env File
-DATABASE_URL=mysql+pymysql://root:yourpassword@localhost/siteforge_db
+9. Create .env
+Inside Backend folder:
 
-SECRET_KEY=your_secret_key_here
+DATABASE_URL=mysql+pymysql://root:Sanket%406460@localhost/ai_builder
 
-GEMINI_API_KEY=your_gemini_api_key
+SECRET_KEY=sanket_super_secret_key_123
+
+GEMINI_API_KEY=AIzaSyBe7ezs7w1xsEd24ukZfSDcuwnO3-qhoTU
 Gemini API Setup
-10. Generate API Key
-
+10. Get Gemini API Key
 Visit:
 
-Google AI Studio
+https://aistudio.google.com/
 
-Steps
-Login with Google Account
+Steps:
+
+Login with Google
 Create API Key
-Copy API Key
+Copy key
 Paste into .env
-Run Backend Server
+Run Backend
 11. Start FastAPI
 python -m uvicorn app.main:app --reload --port 8001
 Frontend Setup
 12. Open New Terminal
-cd frontend
+cd Frontend
 13. Install Reflex
 pip install reflex
 14. Initialize Reflex
@@ -162,92 +161,82 @@ reflex run
 Access Application
 Frontend
 http://localhost:3000
-Backend API Docs
+Backend API
 http://127.0.0.1:8001/docs
-AI Workflow
+How AI Website Generation Works
 Step 1
+User enters:
 
-User enters business name.
-
+Business Name
 Step 2
-
 Frontend sends request to FastAPI backend.
 
 Step 3
-
 Backend sends prompt to Gemini AI.
 
 Step 4
+Gemini generates structured JSON website sections.
 
-Gemini AI generates structured website JSON.
+Example:
 
-Example
 {
   "sections": [
     {
       "type": "hero",
-      "title": "Welcome to NovaTech Solutions"
+      "title": "Welcome to TechNova AI"
     }
   ]
 }
 Step 5
+Frontend dynamically renders components.
 
-Frontend dynamically renders website components.
-
-Implemented Features
-
-✅ Reflex Frontend
-✅ FastAPI Backend
-✅ Gemini AI Integration
-✅ Dynamic Website Rendering
-✅ Business-Type Detection
-✅ Responsive UI
-✅ Hero/About/Services/CTA Sections
-✅ State Management
-✅ API Integration
-
-Future Enhancements
-Drag & Drop Website Editor
-AI Logo Generator
-AI Image Generator
-Theme Customizer
-Live Mobile Preview
-HTML/CSS Export
-One-click Deployment
-Real-time Editing
-Multi-page Website Generation
-AI Chat Assistant
-SEO Content Generator
-System Architecture
+Current Features Implemented
+Completed
+Reflex frontend
+FastAPI backend
+Gemini AI integration
+Dynamic rendering
+Business-based website generation
+Responsive modern UI
+Hero/About/Services/CTA sections
+State management
+API integration
+Future Improvements
+Planned Features
+Drag-and-drop editor
+AI image generation
+AI logo generation
+Theme generator
+Live mobile preview
+Export HTML/CSS
+One-click deployment
+Real-time editing
+Multi-page generation
+AI chatbot assistant
+SEO generation
+Architecture
 Frontend Layer
-
 Handles:
 
-User Interaction
-Dynamic Rendering
-State Management
-Live Website Preview
+User interaction
+Dynamic rendering
+State management
+Live preview
 Backend Layer
-
 Handles:
 
-AI Processing
+AI processing
 Authentication
-Database Operations
-Website Generation Logic
+Database operations
+Website generation
 AI Layer
-
 Handles:
 
-Business Understanding
-Content Generation
-Layout Personalization
-Website Structure Generation
+Business understanding
+Content generation
+Dynamic website structure
+Business-specific layouts
 Author
+Sanket Pandit
 
-Atharv Jagtap
-Cloud Technology & Information Security Student
-
-License
-
-This project is developed for educational and learning purposes.
+AI Website Builder Project

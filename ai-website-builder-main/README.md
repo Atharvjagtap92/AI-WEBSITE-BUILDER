@@ -1,4 +1,4 @@
-# AI Website Builder using Reflex + FastAPI + Gemini AI
+# AI SiteForge — Intelligent Website Generator
 
 ## Overview
 
